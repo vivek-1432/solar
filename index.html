@@ -1,0 +1,257 @@
+<body>
+    <div class="header">
+        XYZ Solar Company
+        <a href="solar.html" target="_blank">
+            <button class="intro">Intro</button>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="slide active" id="slide1">
+            <img src="slide1.jpg" alt="Slide 1">
+            <div class="text">John and Rose are happy couples, but always getting tensed about electricity bill. 
+            </div>
+        </div>
+        <div class="slide" id="slide2">
+            <img src="slide2.jpg" alt="Slide 2">
+            <div class="text">And they got info about XYZ Solar.After using solar they naver worry about electricity bill.</div>
+        </div>
+        <div class="slide" id="slide3">
+            <img src="slide3.jpg" alt="Slide 3">
+            <div class="text">you also shouldn't be worry about electricity bill. Like John and Rose
+                because XYZ Solar with you.
+            </div>
+        </div>
+        <div class="slide" id="slide4">
+            <img src="slide4.jpg" alt="Slide 4">
+            <div class="text">join us for bright and pocket friendly future.</div>
+        </div>
+        <button class="corner-button" id="nextSlide">Next</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const nextButton = document.getElementById('nextSlide');
+        const nextSlideButton = document.getElementById('next');
+        const introButton = document.getElementById('intro');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        nextSlideButton?.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        introButton?.addEventListener('click', () => {
+            window.location.href = 'solar.html';  // Directly go to solar.html
+        });
+
+        showSlide(currentSlide);
+    </script>
+
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+        }
+
+        .intro {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .intro:hover {
+            background-color: #c82333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+            text-align: center;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .slide img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .text {
+            margin-top: 15px;
+            font-size: 2.2rem;
+            color: #333;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: rgb(243, 223, 4);
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            z-index: 2;
+        }
+
+        .corner-button {
+            position: absolute;
+            bottom: 300px;
+            right: 20px;
+            padding: 20px 40px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .corner-button:hover {
+            background-color: #0056b3;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .buttons button {
+            margin: 0 10px;
+            padding: 15px 30px; /* Reduced padding */
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.5rem; /* Reduced font size */
+        }
+
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        .buttons #intro {
+            position: absolute;
+            top: -40px; /* Moves the intro button above the next button */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Responsive Design for Small Screens */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .intro {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .text {
+                font-size: 1.5rem;
+                padding: 8px;
+            }
+
+            .corner-button {
+                bottom: 150px;
+                right: 10px;
+                padding: 15px 20px;
+                font-size: 0.9rem;
+            }
+
+            .buttons button {
+                margin: 5px;
+                padding: 10px 20px;
+                font-size: 1.2rem;
+            }
+
+            .buttons #intro {
+                top: -30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 10px;
+                font-size: 1.2rem;
+            }
+
+            .intro {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+
+            .text {
+                font-size: 1.2rem;
+                padding: 6px;
+            }
+
+            .corner-button {
+                bottom: 100px;
+                padding: 10px 15px;
+                font-size: 0.8rem;
+            }
+
+            .buttons button {
+                padding: 8px 15px;
+                font-size: 1rem;
+            }
+
+            .buttons #intro {
+                top: -25px;
+            }
+        }
+
+    </style>
+</body>

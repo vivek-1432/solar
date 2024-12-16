@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Solar Company - Solar Energy</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+.header a.back-home {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff0000; /* Red background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.header a.back-home:hover {
+    background-color: #cc0000;
+}
+
+/* Section Styles */
+.section {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    margin: 20px 0;
+}
+
+.section img {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.section .content {
+    width: 60%;
+    text-align: left;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.section .animated-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    border-left: 3px solid #007bff;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.section-line {
+    height: 4px;
+    background-color: #007bff;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+/* Footer Style */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Typing Animation */
+.typing {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(40, end), blink 0.6s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #007bff;
+    }
+}
+
+.smooth-typing {
+    animation: smoothTyping 0.5s steps(25, end), blink 1s step-end infinite;
+}
+
+@keyframes smoothTyping {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        font-size: 1.2rem;
+    }
+
+    .header a.back-home {
+        margin-top: 10px;
+    }
+
+    .section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .section img {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .section .content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section .animated-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .header a.back-home {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    .section h2 {
+        font-size: 1.2rem;
+    }
+
+    .section .animated-text {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        XYZ Solar Company - Solar Energy
+        <a href="index.html" class="back-home">Back to Home</a>
+    </div>
+
+    <!-- First Section: About XYZ Solar Company -->
+    <div class="section">
+        <img src="comp.jpg" alt="XYZ Solar Company" />
+        <div class="content">
+            <h2>About XYZ Solar Company</h2>
+            <p class="animated-text smooth-typing">XYZ Solar Company is committed to providing sustainable, clean energy to homeowners and businesses alike. Our mission is to reduce your energy costs while contributing to a greener planet.</p>
+        </div>
+    </div>
+    <div class="section-line"></div>
+
+    <!-- Second Section: Solar Energy is Pocket-Friendly -->
+    <div class="section">
+        <img src="pocket.jpg" alt="Solar Savings" />
+        <div class="content">
+            <h2>How Solar Energy is Pocket-Friendly</h2>
+            <p class="animated-text smooth-typing">Switching to solar energy can significantly lower your electricity bills. With our affordable solar solutions, you can save money while being eco-friendly.</p>
+        </div>
+    </div>
+    <div class="section-line"></div>
+
+    <!-- Third Section: The Future of Solar Energy -->
+    <div class="section">
+        <img src="future.jpg" alt="Future of Solar" />
+        <div class="content">
+            <h2>The Future of Solar Energy</h2>
+            <p class="animated-text smooth-typing">Solar energy is the future of energy production. With new advancements in technology, solar systems are becoming more efficient, cost-effective, and easier to install. The future of energy is bright with solar!</p>
+        </div>
+    </div>
+    <div class="section-line"></div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 XYZ Solar Company. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>
